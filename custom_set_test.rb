@@ -192,7 +192,6 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_difference_of_empty_set_and_non_empty_set_is_an_empty_set
-    skip
     set1 = CustomSet.new []
     set2 = CustomSet.new [3, 2, 5]
     expected = CustomSet.new []
@@ -200,7 +199,6 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_difference_of_a_non_empty_set_and_an_empty_set_is_the_non_empty_set
-    skip
     set1 = CustomSet.new [1, 2, 3, 4]
     set2 = CustomSet.new []
     expected = CustomSet.new [1, 2, 3, 4]
@@ -208,7 +206,6 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_the_first_set
-    skip
     set1 = CustomSet.new [3, 2, 1]
     set2 = CustomSet.new [2, 4]
     expected = CustomSet.new [1, 3]
@@ -216,7 +213,6 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_union_of_empty_sets_is_an_empty_set
-    skip
     set1 = CustomSet.new []
     set2 = CustomSet.new []
     expected = CustomSet.new []

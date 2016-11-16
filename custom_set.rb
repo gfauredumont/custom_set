@@ -31,6 +31,15 @@ class CustomSet
     CustomSet.new(new_param)
   end
 
+  def difference(set)
+    new_param = @param.select { |p| !set.member?(p) }
+    CustomSet.new(new_param)
+  end
+
+  def union(set)
+    CustomSet.new
+  end
+
   def empty?
     @param.empty?
   end
