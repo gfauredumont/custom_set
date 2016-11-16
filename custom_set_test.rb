@@ -77,28 +77,24 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_empty_set_is_disjoint_with_non_empty_set
-    skip
     set1 = CustomSet.new []
     set2 = CustomSet.new [1]
     assert set1.disjoint? set2
   end
 
   def test_non_empty_set_is_disjoint_with_empty_set
-    skip
     set1 = CustomSet.new [1]
     set2 = CustomSet.new []
     assert set1.disjoint? set2
   end
 
   def test_sets_are_not_disjoint_if_they_share_an_element
-    skip
     set1 = CustomSet.new [1, 2]
     set2 = CustomSet.new [2, 3]
     refute set1.disjoint? set2
   end
 
   def test_sets_are_disjoint_if_they_share_no_elements
-    skip
     set1 = CustomSet.new [1, 2]
     set2 = CustomSet.new [3, 4]
     assert set1.disjoint? set2
