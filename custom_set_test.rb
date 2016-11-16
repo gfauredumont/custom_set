@@ -131,28 +131,24 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_add_to_empty_set
-    skip
     set = CustomSet.new []
     expected = CustomSet.new [3]
     assert_equal expected, set.add(3)
   end
 
   def test_add_to_non_empty_set
-    skip
     set = CustomSet.new [1, 2, 4]
     expected = CustomSet.new [1, 2, 3, 4]
     assert_equal expected, set.add(3)
   end
 
   def test_adding_an_existing_element_does_not_change_the_set
-    skip
     set = CustomSet.new [1, 2, 3]
     expected = CustomSet.new [1, 2, 3]
     assert_equal expected, set.add(3)
   end
 
   def test_intersection_of_two_empty_sets_is_an_empty_set
-    skip
     set1 = CustomSet.new []
     set2 = CustomSet.new []
     expected = CustomSet.new []
@@ -160,7 +156,6 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_intersection_of_an_empty_set_and_non_empty_set_is_an_empty_set
-    skip
     set1 = CustomSet.new []
     set2 = CustomSet.new [3, 2, 5]
     expected = CustomSet.new []
@@ -168,7 +163,6 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_intersection_of_a_non_empty_set_and_an_empty_set_is_an_empty_set
-    skip
     set1 = CustomSet.new [1, 2, 3, 4]
     set2 = CustomSet.new []
     expected = CustomSet.new []
@@ -176,7 +170,6 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_intersection_of_two_sets_with_no_shared_elements_is_an_empty_set
-    skip
     set1 = CustomSet.new [1, 2, 3]
     set2 = CustomSet.new [4, 5, 6]
     expected = CustomSet.new []
@@ -185,7 +178,6 @@ class CustomSetTest < Minitest::Test
 
   # rubocop:disable Metrics/LineLength
   def test_intersection_of_two_sets_with_shared_elements_is_a_set_of_the_shared_elements
-    skip
     set1 = CustomSet.new [1, 2, 3, 4]
     set2 = CustomSet.new [3, 2, 5]
     expected = CustomSet.new [2, 3]
@@ -193,7 +185,6 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_difference_of_two_empty_sets_is_an_empty_set
-    skip
     set1 = CustomSet.new []
     set2 = CustomSet.new []
     expected = CustomSet.new []
