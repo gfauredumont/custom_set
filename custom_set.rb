@@ -13,10 +13,12 @@ class CustomSet
   end
 
   def disjoint?(second_set)
-    @param.each do |p|
-      return false if second_set.member?(p)
-    end
-    true
+    return true if empty? || second_set.empty?
+    !@param.any? { |p| second_set.member?(p) }
+  end
+
+  def ==(second_set)
+    subset?(second_set) && second_set.subset?(self)
   end
 
   def empty?

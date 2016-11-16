@@ -101,35 +101,30 @@ class CustomSetTest < Minitest::Test
   end
 
   def test_empty_sets_are_equal
-    skip
     set1 = CustomSet.new []
     set2 = CustomSet.new []
     assert_equal set1, set2
   end
 
   def test_empty_set_is_not_equal_to_non_empty_set
-    skip
     set1 = CustomSet.new []
     set2 = CustomSet.new [1, 2, 3]
     refute_equal set1, set2
   end
 
   def test_non_empty_set_is_not_equal_to_empty_set
-    skip
     set1 = CustomSet.new [1, 2, 3]
     set2 = CustomSet.new []
     refute_equal set1, set2
   end
 
   def test_sets_with_the_same_elements_are_equal
-    skip
     set1 = CustomSet.new [1, 2]
     set2 = CustomSet.new [2, 1]
     assert_equal set1, set2
   end
 
   def test_sets_with_different_elements_are_not_equal
-    skip
     set1 = CustomSet.new [1, 2, 3]
     set2 = CustomSet.new [1, 2, 4]
     refute_equal set1, set2
