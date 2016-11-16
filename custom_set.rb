@@ -37,7 +37,11 @@ class CustomSet
   end
 
   def union(set)
-    CustomSet.new
+    return set if empty?
+    return self if set.empty?
+    d = difference(set)
+    new_param = @param.select { d.member?(p) } + @params
+    CustomSet.new(new_param)
   end
 
   def empty?
