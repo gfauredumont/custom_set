@@ -37,11 +37,11 @@ class CustomSet
   end
 
   def union(set)
-    return set if empty?
-    return self if set.empty?
-    d = difference(set)
-    new_param = @param.select { d.member?(p) } + @params
-    CustomSet.new(new_param)
+    new_set = set.dup
+    @param.each do |item|
+      new_set.add(item) unless new_set.member?(item)
+    end
+    return new_set
   end
 
   def empty?
