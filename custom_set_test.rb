@@ -7,33 +7,28 @@ require_relative 'custom_set'
 # cdfb4a2
 class CustomSetTest < Minitest::Test
   def test_sets_with_no_elements_are_empty
-    # skip
     set = CustomSet.new []
     assert_empty set
   end
 
   def test_sets_with_elements_are_not_empty
-    skip
     set = CustomSet.new [1]
     refute_empty set
   end
 
   def test_nothing_is_contained_in_an_empty_set
-    skip
     set = CustomSet.new []
     element = 1
     refute set.member? element
   end
 
   def test_when_the_element_is_in_the_set
-    skip
     set = CustomSet.new [1, 2, 3]
     element = 1
     assert set.member? element
   end
 
   def test_when_the_element_is_not_in_the_set
-    skip
     set = CustomSet.new [1, 2, 3]
     element = 4
     refute set.member? element
